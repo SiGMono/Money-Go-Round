@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvs5s7s724g8n"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2bgo6kkqdl3q" path="res://assets/players/car.obj" id="1_1e06q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhlg7"]
+size = Vector3(62.292046, 25.257439, 29.7795)
+
+[node name="PlayerCar" type="CharacterBody3D" unique_id=380678038]
+
+[node name="Car" type="MeshInstance3D" parent="." unique_id=793913148]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = ExtResource("1_1e06q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1899993172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4427681, 3.9720669, 0.028860092)
+visibility_parent = NodePath("../Car")
+shape = SubResource("BoxShape3D_hhlg7")

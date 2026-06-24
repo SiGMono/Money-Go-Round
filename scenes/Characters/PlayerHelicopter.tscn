@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://omhnsc8dv8aw"]
+
+[ext_resource type="ArrayMesh" uid="uid://bjedry3la8b8t" path="res://assets/players/helicopter.obj" id="1_ynmnu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhlg7"]
+size = Vector3(94.75015, 26.846146, 71.48079)
+
+[node name="PlayerHelicopter" type="CharacterBody3D" unique_id=380678038]
+
+[node name="Helicopter" type="MeshInstance3D" parent="." unique_id=793913148]
+mesh = ExtResource("1_ynmnu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1899993172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.544205, 2.165968, -0.07249069)
+visibility_parent = NodePath("../Helicopter")
+shape = SubResource("BoxShape3D_hhlg7")

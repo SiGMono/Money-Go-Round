@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmw2pcg8e6p2k"]
+
+[ext_resource type="ArrayMesh" uid="uid://u6d8cx3xp1tn" path="res://assets/players/boat.obj" id="1_3dej8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhlg7"]
+size = Vector3(82.97873, 20.972134, 29.7795)
+
+[node name="PlayerBoat" type="CharacterBody3D" unique_id=380678038]
+
+[node name="Boat" type="MeshInstance3D" parent="." unique_id=793913148]
+mesh = ExtResource("1_3dej8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1899993172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82434845, 5.2370167, 0.028860092)
+visibility_parent = NodePath("../Boat")
+shape = SubResource("BoxShape3D_hhlg7")

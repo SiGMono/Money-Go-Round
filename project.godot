@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Money Go Roundv"
+run/main_scene="uid://gtrn67p00g2m"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[debug]
+
+shapes/collision/shape_color=Color(0, 0.6, 0.69803923, 0.8392157)
 
 [physics]
 

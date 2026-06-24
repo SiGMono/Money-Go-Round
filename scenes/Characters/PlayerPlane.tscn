@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ct5elwehp4lxe"]
+
+[ext_resource type="ArrayMesh" uid="uid://caclhjwtmcfwb" path="res://assets/players/plane.obj" id="1_eb7sb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hhlg7"]
+size = Vector3(64.97759, 16.479671, 75.84851)
+
+[node name="PlayerPlane" type="CharacterBody3D" unique_id=380678038]
+
+[node name="Plane" type="MeshInstance3D" parent="." unique_id=793913148]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = ExtResource("1_eb7sb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1899993172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.824917, 1.5345821, -0.26708984)
+visibility_parent = NodePath("../Plane")
+shape = SubResource("BoxShape3D_hhlg7")
